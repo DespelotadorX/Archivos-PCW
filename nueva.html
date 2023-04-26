@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>TuVecindarionline</title>
+  <link rel="stylesheet" href="css/nueva.css">
+  <link rel="stylesheet" href="css/fontello.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text&display=swap" rel="stylesheet">
+  <script> src="nueva.js"></script>
+  <script>redirigirUsuarioLogueado (false);</script>
+</head>
+<body data-pag="index">
+  <header>
+    <a href="index.html"><img src="./images/simple-house-symbol-and-home-icon-sign-free-png.png" alt=""></a>
+       <h1>TuVecindarionline</h1>
+       <h2>Las noticias de tu barrio actualizadas.</h2>
+    </header>
+
+    <nav id="defnav"></nav>
+    <nav id="colnav"></nav>
+    <script>obtenerNav( [1,1,0,1] );</script>
+
+          <main class="nuevaPublicacion">
+            <h2>Creador de publicaciones</h2>
+            <form method="POST" class="crearPublicacion" onsubmit="return enviarPublicacion( this );">
+              <div class="creador">
+                <div class="tit">
+                  <span class="ico icon-tag"></span><pre>Título</pre>
+                  <input style="margin-left: 8px;" id="nombrePublicacion" type="text" minlength="1" maxlength="100" name="nombre" required autofocus placeholder="m&aacute;x. 100 caracteres">
+                </div>
+                <div class="text">
+                 <span style="margin-left: 50px;"></span><pre>Texto</pre>
+                  <textarea style="margin-left: 8px;" id="descripcionPublicacion" rows="4" minlength="1" maxlength="100" name="descripcion" placeholder="Texto asociado a la ubicación (m&aacute;x. 300 caracteres)" required></textarea>
+                </div>
+                <div class="prueba">
+                  <pre>Ubicación</pre>
+                  <label style="margin-left: 8px;" name="ubicacion" for="Misubicaciones"></label>
+                  <input list="ubicaciones" id="Misubicaciones" name="Misubicaciones">
+                  <datalist id="ubicaciones">
+                    <script>obtenerUbicaciones();</script>
+                  </datalist>
+              </div> 
+              <div class="botonesfinal">
+                <div>
+                <input class="boton" type="submit" id="boton2" value="Enviar">
+                  <input class="reset" type="reset" id="boton22" value="Limpiar">
+                </div>
+              </div>
+              </div>
+              
+            </form>
+
+                        <br>
+                        <div class="fotos">
+                          <span>Poner Imágenes</span>
+                          <div class="imagenes">
+                            <div class="derecha">
+                              <div class="todo">
+                                <span>Foto:</span>
+                                <br>
+                                <label for="inputfoto">
+                                    <img src="./images/nodisponible.png" alt="Imagen" width="265">
+                                </label>
+                                <div class="botonesfoto">
+                                  <input type="file" onclick="subirFoto(); botonSubirFoto();" accept="image/*" id="fichero1" class="inputfoto" id="inputfoto" name="fichero" onchange="mostrarImagen( this ); boton SubirFoto();">
+                                  <input class="reset" type="reset" value="Limpiar" onclick="clearPic()" id="limpiarFoto1">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="derecha">
+                              <div class="todo">
+                                <span>Foto:</span>
+                                <br>
+                                <label for="inputfoto2">
+                                    <img src="./images/nodisponible.png" alt="Imagen" width="265">
+                                </label>
+                                <div class="botonesfoto">
+                                 <input type="file" accept="image/*" id="fichero1" class="inputfoto" id="inputfoto2" name="fichero" onchange="mostrarImagen( this ); boton SubirFoto();">
+                                  <input class="reset" type="reset" value="Limpiar" onclick="clearPic()" id="limpiarFoto2">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="derecha">
+                              <div class="todo">
+                                <span>Foto:</span>
+                                <br>
+                                <label for="inputfoto3">
+                                    <img src="./images/nodisponible.png" alt="Imagen" width="265">
+                                </label>
+                                <div class="botonesfoto">
+                                  <input type="file" accept="image/*" id="fichero1" class="inputfoto" id="inputfoto3" name="fichero" onchange="mostrarImagen( this ); boton SubirFoto();">
+                                  <input class="reset" type="reset" value="Limpiar" onclick="clearPic()" id="limpiarFoto3">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="derecha">
+                              <div class="todo">
+                                <span>Foto:</span>
+                                <br>
+                                <label for="inputfoto4">
+                                    <img src="./images/nodisponible.png" alt="Imagen" width="265">
+                                </label>
+                                <div class="botonesfoto">
+                                  <input type="file" accept="image/*" id="fichero1" class="inputfoto" id="inputfoto4" name="fichero" onchange="mostrarImagen( this ); boton SubirFoto();">
+                                  <input class="reset" type="reset" value="Limpiar" onclick="clearPic()" id="limpiarFoto4">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+              
+
+        </main>
+        <br>
+        <footer>
+          <p>&copy; <time datetime="2023-02">Febrero de 2023</time> <abbr title="Programación del Cliente Web">PCW</abbr></p><p><a href="acerca.html">Contacto</a></p> <p> Práctica 1 HTML - CSS</p>
+        </footer>
+		
+	</body>
+</html>
